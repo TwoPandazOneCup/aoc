@@ -18,7 +18,6 @@ int erTrekant(int x, int y, int z)
 		return TRUE;
 	return FALSE;
 }
-
 int main(void)
 {
 	FILE * pFile;
@@ -35,17 +34,10 @@ int main(void)
 	pFile = fopen("input", "r");
 	while((c = fgetc(pFile)) != EOF)
 	{
-	
-
-
 		if(c >= 48 && c <= 57)
-
-		{
-				
+		{	
 			tal[i] = c;
 			++i;
-				
-
 		}
 		else 
 		{
@@ -54,24 +46,17 @@ int main(void)
 			int x = atoi(tal);
 			if (x != 0)
 			{
-			
-			triangel[nr][ii] = x;
-			
-				
-			tal[0] = 0;
-			tal[1] = 0;
-			tal[2] = 0;
-		  
-				
-			++ii;
+				triangel[nr][ii] = x;
+				tal[0] = 0;
+				tal[1] = 0;
+				tal[2] = 0;	
+				++ii;
 			}
 		}
-		
 		if (c == '\n' && nr  <= 2)
 		{
 			ii = 0;
 			++nr;
-			//printf("%d \n", nr);
 		}
 		else if ( nr == 3)
 		{
@@ -86,18 +71,9 @@ int main(void)
 			}	 
 			nr = 0;
 			printf("\n");
-		   
-
-				   
-				ii = 0;
-
+		   	ii = 0;
 		}
-	}
-	
-							
-				
-				
+	}		
 	printf("%d\n",sum);
 	return 0;
 }	 
-
